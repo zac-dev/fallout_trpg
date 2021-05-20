@@ -1,11 +1,33 @@
 
 .fallout-main {}
 
-.fallout-main-logo {}
+.fallout-main-logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+    align-self: center;
+    justify-self: center;
+}
 
-.fallout-main-name {}
+.fallout-main-name {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+    align-self: center;
+    justify-self: center;
+    height: 113px;
+}
 
-.bfallout-main-xp {}
+.fallout-main-xp {
+    grid-column-start: 3;
+    grid-column-end: end;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+    align-self: center;
+    justify-self: center;
+}
 
 .fallout-special {}
 
@@ -17,9 +39,20 @@
 
 /* coloum containers */
 
-.horizontal-container {}
+.horizontal-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 15px;
+    column-gap: 1%;
+    align-items: stretch;
+    width: 100%;
+}
 
-.coloum-container {}
+.coloum-container {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(200, 194, 194);
+}
 
 /* row containers */
 
@@ -29,26 +62,62 @@
 
 /* Boxed Titled Fields */ 
 
-.vertical-box {}
+.vertical-box {
+    display: block;
+}
 
-.horizontal-box {}
+.horizontal-box {
+    display: inline-block;
+}
 
-.box-title {}
+.box-title {
+    padding: 8px;
+}
 
-.box-content {}
+.horizontal-box .box-title {
+    display: inline-block;
+    width: 150px;
+}
 
-.input-field-medium {}
+.box-content {
+}
+
+.vertical-box .box-content {
+    height: 81px;
+    width: 100%;
+}
+
+.horizontal-box .box-content {
+    display: inline-block;
+}
+
+.input-field-medium {
+    height: 100%;
+}
+
+.input-field-bordered {
+    height: 100%;
+    border: none;
+}
 
 /* Cogs */ 
 
-.cog-value {}
+.cogged-value {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/cog-whitefill-150.png')
+}
 
-.cog-title {}
+.cog-inner-title {}
 
 .cog-value {}
 
 /* Colours */
 
-.black {}
+.black {
+    background-color: black;
+    color: white;
+}
 
-.orange {}
+.orange {
+    background-color: orange;
+    color: white;
+}

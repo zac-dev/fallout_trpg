@@ -5,33 +5,34 @@
 
 
 <div class="fallout-main horizontal-container">
-		<div class="fallout-main-logo coloum-container">
-			<img src="https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/logo.png">
+	<div class="fallout-main-logo coloum-container">
+		<img src="https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/logo.png">
+	</div>
+	<div class="fallout-main-name vertical-black-box coloum-container">
+		<div class="black box-title">
+			<span>CHARACTER NAME</span>
 		</div>
-		<div class="fallout-main-name vertical-black-box coloum-container">
-			<div class="black-box-title">
-				<span>CHARACTER NAME</span>
-			</div>
-			<div class="black-box-content">
-				<input class="input-field-medium" type="text" name="attr_character_name" value="@{character_name}"/>
-			</div>
+		<div class="box-content">
+			<input class="input-field-bordered" type="text" name="attr_character_name" value="@{character_name}"/>
 		</div>
+	</div>
 
-		<div class="fallout-main-xp coloum-container">
+	<div class="fallout-main-xp coloum-container">
+		<div class="fallout-xp-fields">
 			<div class="horizontal-box">
 				<div class="black box-title">
 					<span>XP EARNED</span>
 				</div>
 				<div class="box-content">
-					<input class="input-field-medium" type="text" name="attr_character_name" value="0"/>
+					<input class="input-field-bordered" type="text" name="attr_character_name" value="0"/>
 				</div>
 			</div>
-			<div class="black horizontal-box">
+			<div class="horizontal-box">
 				<div class="black box-title">
 					<span>XP TO NEXT LEVEL</span>
 				</div>
 				<div class="box-content">
-					<input class="input-field-medium" type="text" name="attr_character_name" value="10"/>
+					<input class="input-field-bordered" type="text" name="attr_character_name" value="10"/>
 				</div>
 			</div>
 			<br />
@@ -41,65 +42,68 @@
 				</div>
 				<div class="box-content">
 					<select class="input-field-medium" name="attr_origin" title="Origin">
-                        <option value="@{attr_origin_brotherhood_of_steel}" selected>Brotherhood of Steel</option>
-                        <option value="@{attr_origin_ghoul}">Ghoul</option>
-                        <option value="@{attr_origin_super_mutant}">Super Mutant</option>
-                        <option value="@{attr_origin_mister_handy}">Mister Handy</option>
-                        <option value="@{attr_origin_survivor}">Survivor</option>
-                        <option value="@{attr_origin_vault_dweller}">Vault Dweller</option>
-                    </select>
+						<option value="@{attr_origin_brotherhood_of_steel}" selected>Brotherhood of Steel</option>
+						<option value="@{attr_origin_ghoul}">Ghoul</option>
+						<option value="@{attr_origin_super_mutant}">Super Mutant</option>
+						<option value="@{attr_origin_mister_handy}">Mister Handy</option>
+						<option value="@{attr_origin_survivor}">Survivor</option>
+						<option value="@{attr_origin_vault_dweller}">Vault Dweller</option>
+					</select>
 				</div>
 			</div>
-			<div class="cog-value">
+		</div>
+		<div class="fallout-xp-level">
+			<div class="cogged-value">
 				<span class="cog-title">LEVEL</span>
 				<span class="cog-value">0</span>
 			</div>
-		</div>
 	</div>
+	</div>
+</div>
 
-	<div class="fallout-special horizontal-container">
-		<div class="titled-cog-value">
-			<span class="cog-title">STRENGTH</span>
+<div class="fallout-special horizontal-container">
+	<div class="titled-cog-value">
+		<span class="cog-title">STRENGTH</span>
+		<span class="cog-value">0</span>
+	</div>
+	<div class="titled-cog-value">
+		<span class="cog-title">PERCEPTION</span>
+		<span class="cog-value">0</span>
+	</div>
+	<div class="titled-cog-value">
+		<span class="cog-title">ENDURANCE</span>
+		<span class="cog-value">0</span>
+	</div>
+	<div class="titled-cog-value">
+		<span class="cog-title">CHARISMA</span>
+		<span class="cog-value">0</span>
+	</div>
+	<div class="titled-cog-value">
+		<span class="cog-title">INTELIGENCE</span>
+		<span class="cog-value">0</span>
+	</div>
+	<div class="titled-cog-value">
+		<span class="cog-title">AGILITY</span>
+		<span class="cog-value">0</span>
+	</div>
+	<div class="titled-cog-value">
+		<span class="cog-title">LUCK</span>
+		<span class="cog-value">0</span>
+		<div class="small-titled-cog-value">
+			<span class="cog-title">LUCK POINTS</span>
 			<span class="cog-value">0</span>
-		</div>
-		<div class="titled-cog-value">
-			<span class="cog-title">PERCEPTION</span>
-			<span class="cog-value">0</span>
-		</div>
-		<div class="titled-cog-value">
-			<span class="cog-title">ENDURANCE</span>
-			<span class="cog-value">0</span>
-		</div>
-		<div class="titled-cog-value">
-			<span class="cog-title">CHARISMA</span>
-			<span class="cog-value">0</span>
-		</div>
-		<div class="titled-cog-value">
-			<span class="cog-title">INTELIGENCE</span>
-			<span class="cog-value">0</span>
-		</div>
-		<div class="titled-cog-value">
-			<span class="cog-title">AGILITY</span>
-			<span class="cog-value">0</span>
-		</div>
-		<div class="titled-cog-value">
-			<span class="cog-title">LUCK</span>
-			<span class="cog-value">0</span>
-			<div class="small-titled-cog-value">
-				<span class="cog-title">LUCK POINTS</span>
-				<span class="cog-value">0</span>
-			</div>
 		</div>
 	</div>
+</div>
 
-	<div class="fallout-skills-and-combat horizontal-container">
-		<div class="fallout-skills">
-			<span class="title orange">SKILLS</span>
-		</div>
-		<div class="fallout-combat">
-			
-		</div>
+<div class="fallout-skills-and-combat horizontal-container">
+	<div class="fallout-skills">
+		<span class="title orange">SKILLS</span>
 	</div>
+	<div class="fallout-combat">
+
+	</div>
+</div>
 </div>
 
 
