@@ -14,6 +14,7 @@
 .fallout-main-name {
     margin: 0.5rem;
     height: 115px;
+    background-color: white;
 }
 
 .fallout-main-name .box-content {
@@ -27,19 +28,22 @@
 }
 
 .fallout-xp-fields {
-    display: inline-grid;
     width: 330px;
     height: 115px;
+    margin: 0.5rem;
 }
 
 .fallout-xp-level {
-    display: inline-grid;
     width: 115px;
     height: 115px;
+    margin: 0.5rem;
+    display: inline-grid;
 }
 
 .fallout-special {
     display: flex;
+    max-width: 830px;
+    margin: 0.5rem;
 }
 
 .fallout-skills-and-combat {
@@ -63,6 +67,13 @@
     display: inline-block;
 }
 
+
+
+
+
+
+
+
 /* coloum containers */
 
 .horizontal-container {
@@ -72,6 +83,10 @@
 .coloum-container {
     border: 1px solid rgb(0, 0, 0);
 }
+
+
+
+
 
 /* row containers */
 
@@ -86,7 +101,8 @@
 
 .horizontal-box {
     display: inline-block;
-    width: 100%
+    width: 100%;
+    background-color: white;
 }
 
 .box-title {
@@ -113,7 +129,7 @@
 }
 
 .fallout-main-name .input-field-bordered {
-    width: auto;
+    width: 156px;
 }
 
 .input-field-medium {
@@ -151,8 +167,13 @@
     text-align: center;
 }
 
+.double-grey-cogs,
 .titled-cog-value {
     width: 150px;
+}
+
+.small-titled-cog-value {
+    border: none;
 }
 
 .cog-value-title {
@@ -165,9 +186,9 @@
     text-align: center;
     margin-top: 10px;
 }
-
-.titled-cod-value .cog-value {
-
+.titled-cog-value .cog-value-title,
+.titled-cog-value .cog-value {
+    margin-top: 22px
 }
 
 .cog-value {
@@ -243,6 +264,54 @@
     display: block;
 }
 /* Colours */
+
+.green-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/green-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.brown-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/brown-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.blue-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/blue-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.orange-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/orange-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.beige-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/baige-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.salmon-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/salmon-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.grey-top-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/grey-top-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
+
+.grey-small-left-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/grey-left-cog.png');
+    background-size: 118px;
+    background-repeat: no-repeat;
+}
 
 .black {
     background-color: black;

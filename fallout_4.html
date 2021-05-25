@@ -11,48 +11,45 @@
 			<input class="input-field-bordered" type="text" name="attr_character_name" value="@{character_name}" style="height: 100%;"/>
 		</div>
 	</div>
-
-	<div class="fallout-main-xp">
-		<div class="fallout-xp-fields">
-			<div class="horizontal-box coloum-container">
-				<div class="black box-title">
-					<span>XP EARNED</span>
-				</div>
-				<div class="box-content">
-					<input class="input-xp-field" type="text" name="attr_character_xp" value="0"/>
-				</div>
+	<div class="fallout-xp-fields">
+		<div class="horizontal-box coloum-container">
+			<div class="black box-title">
+				<span>XP EARNED</span>
 			</div>
-			<div class="horizontal-box coloum-container" style="margin-top: -1px;">
-				<div class="black box-title">
-					<span>XP TO NEXT LEVEL</span>
-				</div>
-				<div class="box-content">
-					<input class="input-xp-field" type="text" name="attr_character_xp_next" value="10"/>
-				</div>
-			</div>
-			<div class="horizontal-box coloum-container"style="margin-top: 9px;">
-				<div class="black box-title">
-					<span>Origin</span>
-				</div>
-				<div class="box-content">
-					<select class="input-field-medium" name="attr_origin" title="Origin">
-						<option value="@{attr_origin_brotherhood_of_steel}" selected>Brotherhood of Steel</option>
-						<option value="@{attr_origin_ghoul}">Ghoul</option>
-						<option value="@{attr_origin_super_mutant}">Super Mutant</option>
-						<option value="@{attr_origin_mister_handy}">Mister Handy</option>
-						<option value="@{attr_origin_survivor}">Survivor</option>
-						<option value="@{attr_origin_vault_dweller}">Vault Dweller</option>
-					</select>
-				</div>
+			<div class="box-content">
+				<input class="input-xp-field" type="text" name="attr_character_xp" value="0"/>
 			</div>
 		</div>
-		<div class="fallout-xp-level">
-			<div class="cogged-value">
-				<span class="cog-inner-title">LEVEL</span>
-				<span class="cog-value">
-					<input class="input-field-cog" type="text" name="attr_character_level" value="1"/>
-				</span>
+		<div class="horizontal-box coloum-container" style="margin-top: -1px;">
+			<div class="black box-title">
+				<span>XP TO NEXT LEVEL</span>
 			</div>
+			<div class="box-content">
+				<input class="input-xp-field" type="text" name="attr_character_xp_next" value="10"/>
+			</div>
+		</div>
+		<div class="horizontal-box coloum-container"style="margin-top: 9px;">
+			<div class="black box-title">
+				<span>Origin</span>
+			</div>
+			<div class="box-content">
+				<select class="input-field-medium" name="attr_origin" title="Origin">
+					<option value="@{attr_origin_brotherhood_of_steel}" selected>Brotherhood of Steel</option>
+					<option value="@{attr_origin_ghoul}">Ghoul</option>
+					<option value="@{attr_origin_super_mutant}">Super Mutant</option>
+					<option value="@{attr_origin_mister_handy}">Mister Handy</option>
+					<option value="@{attr_origin_survivor}">Survivor</option>
+					<option value="@{attr_origin_vault_dweller}">Vault Dweller</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="fallout-xp-level">
+		<div class="cogged-value">
+			<span class="cog-inner-title">LEVEL</span>
+			<span class="cog-value">
+				<input class="input-field-cog" type="text" name="attr_character_level" value="1"/>
+			</span>
 		</div>
 	</div>
 
@@ -93,12 +90,14 @@
 				<input class="input-field-atr" type="text" name="attr_character_atr_AGILITY" value="1"/>
 			</span>
 		</div>
-		<div class="titled-cog-value grey-top-cog">
-			<span class="cog-value-title">LUCK</span>
-			<span class="cog-value">
-				<input class="input-field-atr" type="text" name="attr_character_atr_LUCK" value="1"/>
-			</span>
-			<div class="small-titled-cog-value grey-small-side-cog">
+		<div class="double-grey-cogs">
+			<div class="titled-cog-value grey-top-cog">
+				<span class="cog-value-title">LUCK</span>
+				<span class="cog-value">
+					<input class="input-field-atr" type="text" name="attr_character_atr_LUCK" value="1"/>
+				</span>
+			</div>
+			<div class="small-titled-cog-value grey-small-left-cog">
 				<span class="cog-title">LUCK POINTS</span>
 				<span class="cog-value">
 					<input class="input-field-atr" type="text" name="attr_character_atr_LUCK_pts" value="1"/>
@@ -317,7 +316,9 @@
 		<div class="fallout-combat">
 			<span class="title green">COMBAT</span>
 		</div>
-		<div class="fallout-weapons">
+	</div>
+	
+	<div class="fallout-weapons">
 			<span class="title brown">WEAPONS</span>
 			<table class="weapons-table">
 				<colgroup>
@@ -366,17 +367,18 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		<div class="fallout-inventory">
-			<div class="cogged-value">
-				<span class="cog-inner-title">CAPS</span>
-				<span class="cog-value">
-					<input class="input-field-cog" type="text" name="attr_character_caps" value="1"/>
-				</span>
-			</div>
+	</div>
 
-			<span class="title orange">AMMO</span>
-			<table class="ammo-table">
+	<div class="fallout-inventory">
+		<div class="cogged-value">
+			<span class="cog-inner-title">CAPS</span>
+			<span class="cog-value">
+				<input class="input-field-cog" type="text" name="attr_character_caps" value="1"/>
+			</span>
+		</div>
+
+		<span class="title orange">AMMO</span>
+		<table class="ammo-table">
 				<colgroup>
 					<col style="width: 200px">
 					<col style="width: 100px">
@@ -418,11 +420,11 @@
 						</td>
 					</tr>
 				</tbody>
-			</table>
+		</table>
 
 
-			<span class="title green">GEAR</span>
-			<table class="gear-table">
+		<span class="title green">GEAR</span>
+		<table class="gear-table">
 				<colgroup>
 					<col style="width: 200px">
 					<col style="width: 100px">
@@ -448,11 +450,12 @@
 						<td class="gear-table-cell"> </td>
 					</tr>
 				</tbody>
-			</table>
-		</div>
-		<div class="fallout-perks-n-traits">
-			<span class="title blue">PERKS & TRAITS</span>
-			<table class="perks-n-traits-table">
+		</table>
+	</div>
+
+	<div class="fallout-perks-n-traits">
+		<span class="title blue">PERKS & TRAITS</span>
+		<table class="perks-n-traits-table">
 				<colgroup>
 					<col style="width: 200px">
 					<col style="width: 100px">
@@ -472,8 +475,7 @@
 						<td class="perks-n-traits-table-cell"> </td>
 					</tr>
 				</tbody>
-			</table>
-		</div>
+		</table>
 	</div>
 </div>
 
