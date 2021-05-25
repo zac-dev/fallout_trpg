@@ -1,57 +1,76 @@
+.fallout-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
 
-.fallout-main {}
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/0512-3-512x512.jpg')
+}
 
 .fallout-main-logo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: row1-start;
-    grid-row-end: row1-end;
-    align-self: center;
-    justify-self: center;
+    margin: 0.5rem;
+    width: 196px;
 }
 
 .fallout-main-name {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: row1-start;
-    grid-row-end: row1-end;
-    align-self: center;
-    justify-self: center;
-    height: 113px;
+    margin: 0.5rem;
+    height: 115px;
+}
+
+.fallout-main-name .box-content {
+    height: 79px;
 }
 
 .fallout-main-xp {
-    grid-column-start: 3;
-    grid-column-end: end;
-    grid-row-start: row1-start;
-    grid-row-end: row1-end;
-    align-self: center;
-    justify-self: center;
+    width: 450px;
+    height: 150px;
+    margin: 0.5rem;
 }
 
-.fallout-special {}
+.fallout-xp-fields {
+    display: inline-grid;
+    width: 330px;
+    height: 115px;
+}
 
-.fallout-skills-and-combat {}
+.fallout-xp-level {
+    display: inline-grid;
+    width: 115px;
+    height: 115px;
+}
 
-.fallout-skills {}
+.fallout-special {
+    display: flex;
+}
 
-.fallout-combat {}
+.fallout-skills-and-combat {
+    display: inline-block;
+}
+
+.fallout-skills {
+    display: inline-block;
+    width: 250px;
+}
+
+.fallout-combat {
+    display: inline-block;
+}
+
+.fallout-inventory {
+    display: inline-block;
+}
+
+.fallout-perks-n-traits {
+    display: inline-block;
+}
 
 /* coloum containers */
 
 .horizontal-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 15px;
-    column-gap: 1%;
-    align-items: stretch;
-    width: 100%;
+    
 }
 
 .coloum-container {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(200, 194, 194);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 /* row containers */
@@ -63,11 +82,11 @@
 /* Boxed Titled Fields */ 
 
 .vertical-box {
-    display: block;
 }
 
 .horizontal-box {
     display: inline-block;
+    width: 100%
 }
 
 .box-title {
@@ -75,11 +94,12 @@
 }
 
 .horizontal-box .box-title {
-    display: inline-block;
     width: 150px;
+    display: inline-block;
 }
 
 .box-content {
+    height: 100%;
 }
 
 .vertical-box .box-content {
@@ -88,28 +108,140 @@
 }
 
 .horizontal-box .box-content {
+    width: 147px;
     display: inline-block;
+}
+
+.fallout-main-name .input-field-bordered {
+    width: auto;
 }
 
 .input-field-medium {
     height: 100%;
+    width: 155px;
+    margin-bottom: auto;
 }
 
-.input-field-bordered {
-    height: 100%;
+.input-xp-field {
+    border: none;
+    width: 155px;
+}
+
+.input-field-bordered,
+.input-field-atr {
+    height: 70%;
     border: none;
 }
 
+.input-field-atr {
+    width: 50px;
+}
 /* Cogs */ 
 
 .cogged-value {
-    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/cog-whitefill-150.png')
+    background-image: url("https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/cog-whitefill-150.png");
+    background-size: 115px;
 }
 
-.cog-inner-title {}
+.input-field-atr,
+.input-field-cog {
+    border: none;
+    width: 50px;
+    height: 70%;
+    text-align: center;
+}
 
-.cog-value {}
+.titled-cog-value {
+    width: 150px;
+}
 
+.cog-value-title {
+    display: block;
+    text-align: center;
+}
+
+.cog-inner-title {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.titled-cod-value .cog-value {
+
+}
+
+.cog-value {
+    display: block;
+    text-align: center;
+    height: 77px;
+    margin-top: 10px;
+    font-size: xx-large;
+}
+
+/* Skill table */
+
+.skill-table {
+    table-layout: fixed;
+    width: 250px;
+}
+
+.skill-table-title-cell,
+.ammo-table-title-cell,
+.gear-table-title-cell,
+.perks-n-traits-table-title-cell {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.skill-table-row {
+    color: black;
+}
+
+
+.skill-table-row:nth-child(even) {
+    background-color: rgb(250, 230, 210);
+}
+
+.skill-table-row:nth-child(odd) {
+    background-color: rgb(240, 200, 170);
+}
+
+.skill-table-rank-cell {
+    background-color: white;
+}
+
+.skill-table-cell {
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    padding: 0px 10px;
+}
+
+.associated_stat_text {
+    color: coral;
+}
+
+.character_skill_tag_check {
+    width: 40px;
+    border: none;
+}
+
+/* Weapons */
+.weapons-table-title-cell {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.title {
+    width: 100%;
+    padding: 3px 10px;
+    margin-bottom: 5px;
+    display: block;
+}
 /* Colours */
 
 .black {
@@ -117,7 +249,37 @@
     color: white;
 }
 
+.green {
+    background-color: rgb(117, 155, 125);
+    color: white;
+}
+
+.brown {
+    background-color: rgb(121, 104, 73);
+    color: white;
+}
+
+.blue {
+    background-color: rgb(65, 171, 190);
+    color: white;
+}
+
 .orange {
-    background-color: orange;
+    background-color: rgb(215, 130, 65);
+    color: white;
+}
+
+.beige {
+    background-color: rgb(169, 164, 143);
+    color: white;
+}
+
+.salmon {
+    background-color: rgb(209, 153, 132);
+    color: white;
+}
+
+.grey {
+    background-color: rgb(163, 153, 175);
     color: white;
 }
