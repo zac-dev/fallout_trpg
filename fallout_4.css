@@ -1,14 +1,19 @@
+.sheetform { 
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/0512-3-512x512.jpg')
+}
+
+.charactersheet {
+    padding: 0 !important;
+}
+
 .fallout-main {
     display: flex;
     flex-wrap: wrap;
-    margin: -0.5rem;
-
-    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/0512-3-512x512.jpg')
 }
 
 .fallout-main-logo {
     margin: 0.5rem;
-    width: 196px;
+    width: 188px;
 }
 
 .fallout-main-name {
@@ -46,25 +51,34 @@
     margin: 0.5rem;
 }
 
-.fallout-skills-and-combat {
-    display: inline-block;
-}
-
 .fallout-skills {
-    display: inline-block;
     width: 250px;
+    margin: 0.5rem;
+    overflow: hidden;
 }
 
 .fallout-combat {
-    display: inline-block;
+    margin: 0.5rem;
+    overflow: hidden;
+    width: 580px;
 }
 
 .fallout-inventory {
     display: inline-block;
+    margin: 0.5rem;
+    overflow: hidden;
+    width: 275px;
+}
+
+.fallout-weapons {
+    overflow: hidden;
+    margin: 0.5rem;
 }
 
 .fallout-perks-n-traits {
     display: inline-block;
+    width: 561px;
+    overflow: hidden;
 }
 
 
@@ -107,6 +121,10 @@
 
 .box-title {
     padding: 8px;
+}
+
+.box-title span {
+    font-weight: bold;
 }
 
 .horizontal-box .box-title {
@@ -159,6 +177,27 @@
     background-size: 115px;
 }
 
+.side-cogged-value {
+    background-image: url("https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/cog-whitefill-150.png");
+    background-size: 105px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.side-cog-value {
+    display: inline-block;
+    text-align: center;
+    width: 105px;
+    height: 105px;
+    line-height: 105px;
+}
+
+.side-cog-title {
+    display: inline-block;
+    text-align: center;
+    width: 166px;
+}
+
 .input-field-atr,
 .input-field-cog {
     border: none;
@@ -167,9 +206,35 @@
     text-align: center;
 }
 
+.input-field-perk-table {
+    border: none;
+    width: 75px;
+}
+
+.input-field-ammo-table {
+    width: 88px;
+    border: none;
+    text-align: center;
+}
+.input-field-gear-weight {
+    border: none;
+    text-align: center;
+    width: 45px;
+}
+
+.input-field-gear-name {
+    width: 203px;
+}
+
 .double-grey-cogs,
 .titled-cog-value {
-    width: 150px;
+    width: 120px;
+}
+
+.titled-cog-value {
+    background-repeat: no-repeat;
+    background-size: 126px;
+    background-position: top;
 }
 
 .small-titled-cog-value {
@@ -179,16 +244,23 @@
 .cog-value-title {
     display: block;
     text-align: center;
+    font-weight: bold;
+    color: white;
 }
 
 .cog-inner-title {
     display: block;
     text-align: center;
     margin-top: 10px;
+    font-weight: bold;
 }
 .titled-cog-value .cog-value-title,
 .titled-cog-value .cog-value {
     margin-top: 22px
+}
+
+.cog-value-title {
+    font-weight: bold;
 }
 
 .cog-value {
@@ -249,62 +321,252 @@
     border: none;
 }
 
-/* Weapons */
-.weapons-table-title-cell {
+/* repeting tables */
+
+.table-header-cell {
+    display: inline-block;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.table-header {
+    border: 1px solid black;
+    margin-bottom: 10px;
     background-color: black;
     color: white;
-    border: 1px solid black;
-    padding: 5px 10px;
 }
+
+.footer-item-name {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 192px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 0.5rem;
+    font-weight: bold;
+}
+
+.footer-item-weight {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.weapons_table .repitem,
+.perk_table .repitem,
+.ammo_table .repitem,
+.gear_table .repitem {
+    margin: 0.5rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.weapons_table .repcontrol,
+.perk_table .repcontrol,
+.ammo_table .repcontrol,
+.gear_table .repcontrol {
+    margin: 0.5rem;
+}
+
+/* Ammo */
+
+.ammo_table {
+    border: 1px solid black;
+    background: white;
+    margin-bottom: 15px;
+}
+
+.ammo_name {
+    width: 164px;
+    margin: auto;
+}
+
+.ammo_count {
+    border: none;
+    text-align: right;
+    width: 95px;
+    height: 30px;
+}
+
+.header-caliber {
+    width: 155px;
+}
+
+.header-quantity {
+    width: 96px;
+    text-align: right;
+}
+
+/* Gear */
+
+.gear-name {
+    width: 155px;
+    display: inline-block;
+}
+
+.gear-weight {
+    display: inline-block;
+    width: 102px;
+    text-align: right;
+}
+
+.weapons_table,
+.perk_table,
+.gear_table {
+    background-color: white;
+    border: black 1px solid;
+}
+
+.header-item-name {
+    width: 155px;
+}
+
+.header-item-weight {
+    width: 96px;
+    text-align: right;
+}
+
+
+/* PERKS */
+.header-perk-name {
+    width: 24%;
+}
+.header-perk-rank {
+    width: 8.5%;
+}
+.header-perk-effect {
+    width: 61%;
+}
+.perk-name {
+    width: 25%;
+    display: inline-block;
+}
+.perk-rank {
+    width: 10%;
+    display: inline-block;
+}
+.perk-effect {
+    width: 63.5%;
+    display: inline-block;
+}
+
+/* Weapons */
+.header-weapon-name {
+    width: 156px;
+}
+.header-weapon-skill {
+    width: 56px;
+}
+.header-weapon-tn {
+    width: 26px;
+}
+.header-weapon-tag {
+    width: 24px;
+}
+.header-weapon-damage {
+    width: 60px;
+}
+.header-weapon-effect {
+    width: 77px;
+}
+.header-weapon-type {
+    width: 60px;
+}
+.header-weapon-rate {
+    width: 32px;
+}
+.header-weapon-range {
+    width: 46px;
+}
+.header-weapon-quantities {
+    width: 67px;
+}
+.header-weapon-ammo {
+    width: 42px;
+}
+.header-weapon-weight {
+    width: 52px;
+}
+
+.weapon-name {
+    width: 160px;
+}
+.weapon-skill {
+    width: 64px;
+}
+.weapon-tn {
+    width: 34px;
+}
+.weapon-tag {
+    margin: 8px 10px!important;
+}
+.weapon-damage {
+    width: 68px;
+}
+.weapon-effect {
+    width: 90px;
+}
+.weapon-type {
+    width: 74px;
+}
+.weapon-rate {
+    width: 34px;
+}
+.weapon-range {
+    width: 54px;
+}
+.weapon-quantities {
+    width: 71px;
+}
+.weapon-ammo {
+    width: 51px;
+}
+.weapon-weight {
+    width: 54px;
+}
+
+/* Tables commun */
+
 
 .title {
     width: 100%;
     padding: 3px 10px;
     margin-bottom: 5px;
     display: block;
+    overflow: hidden;
+    font-weight: bold;
 }
+
 /* Colours */
 
 .green-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/green-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .brown-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/brown-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .blue-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/blue-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .orange-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/orange-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .beige-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/baige-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .salmon-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/salmon-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .grey-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/grey-top-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
 }
 
 .grey-small-left-cog {

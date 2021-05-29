@@ -53,7 +53,6 @@
 		</div>
 	</div>
 
-	<div class="fallout-special horizontal-container">
 		<div class="titled-cog-value green-top-cog">
 			<span class="cog-value-title">STRENGTH</span>
 			<span class="cog-value">
@@ -90,13 +89,11 @@
 				<input class="input-field-atr" type="text" name="attr_character_atr_AGILITY" value="1"/>
 			</span>
 		</div>
-		<div class="double-grey-cogs">
-			<div class="titled-cog-value grey-top-cog">
-				<span class="cog-value-title">LUCK</span>
-				<span class="cog-value">
-					<input class="input-field-atr" type="text" name="attr_character_atr_LUCK" value="1"/>
-				</span>
-			</div>
+		<div class="titled-cog-value grey-top-cog">
+			<span class="cog-value-title">LUCK</span>
+			<span class="cog-value">
+				<input class="input-field-atr" type="text" name="attr_character_atr_LUCK" value="1"/>
+			</span>
 			<div class="small-titled-cog-value grey-small-left-cog">
 				<span class="cog-title">LUCK POINTS</span>
 				<span class="cog-value">
@@ -104,378 +101,328 @@
 				</span>
 			</div>
 		</div>
-	</div>
 
-	<div class="fallout-skills-and-combat horizontal-container">
-		<div class="fallout-skills">
-			<span class="title orange">SKILLS</span>
-			<table class="skill-table">
-				<colgroup>
-					<col style="width: 155px">
-					<col style="width: 34px">
-					<col style="width: 54px">
-				</colgroup>
-				<thead>
-					<tr>
-						<th class="skill-table-title-cell">Name</th>
-						<th class="skill-table-title-cell">Tag</th>
-						<th class="skill-table-title-cell">Rank</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Athletics <span class="associated_stat_text">[STR]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_athletic_tagged" name="attr_character_skill_athletic_tagged" value="@{attr_character_skill_athletic_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_athletic_value" value="@{attr_character_skill_athletic_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Barter <span class="associated_stat_text">[CHA]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_barter_tagged" name="attr_character_skill_barter_tagged" value="@{attr_character_skill_barter_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_barter_value" value="@{attr_character_skill_barter_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Big Guns <span class="associated_stat_text">[END]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_bigGuns_tagged" name="attr_character_skill_athletic_tagged" value="@{attr_character_skill_bigGuns_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_bigGuns_value" value="@{attr_character_skill_bigGuns_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Energy Weapons <span class="associated_stat_text">[PER]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_energyWeapons_tagged" name="attr_character_skill_energyWeapons_tagged" value="@{attr_character_skill_energyWeapons_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_energyWeapons_value" value="@{attr_character_skill_energyWeapons_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Explosives <span class="associated_stat_text">[PER]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_Explosives_tagged" name="attr_character_skill_Explosives_tagged" value="@{attr_character_skill_Explosives_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_Explosives_value" value="@{attr_character_skill_Explosives_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Lockpick <span class="associated_stat_text">[PER]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_lockpick_tagged" name="attr_character_skill_lockpick_tagged" value="@{attr_character_skill_lockpick_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_lockpick_value" value="@{attr_character_skill_lockpick_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Medicine <span class="associated_stat_text">[INT]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_medicine_tagged" name="attr_character_skill_medicine_tagged" value="@{attr_character_skill_medicine_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_medicine_value" value="@{attr_character_skill_medicine_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Melee Weapons <span class="associated_stat_text">[STR]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_meleeWeapons_tagged" name="attr_character_skill_meleeWeapons_tagged" value="@{attr_character_skill_meleeWeapons_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_meleeWeapons_value" value="@{attr_character_skill_meleeWeapons_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Pilot <span class="associated_stat_text">[PER]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_pilot_tagged" name="attr_character_skill_pilot_tagged" value="@{attr_character_skill_pilot_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_pilot_value" value="@{attr_character_skill_pilot_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Repair <span class="associated_stat_text">[INT]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_repair_tagged" name="attr_character_skill_repair_tagged" value="@{attr_character_skill_repair_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_repair_value" value="@{attr_character_skill_repair_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Science <span class="associated_stat_text">[INT]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_science_tagged" name="attr_character_skill_science_tagged" value="@{attr_character_skill_science_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_science_value" value="@{attr_character_skill_science_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Small Guns <span class="associated_stat_text">[AGI]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_smallGuns_tagged" name="attr_character_skill_smallGuns_tagged" value="@{attr_character_skill_smallGuns_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_smallGuns_value" value="@{attr_character_skill_smallGuns_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Sneak <span class="associated_stat_text">[AGI]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_sneak_tagged" name="attr_character_skill_sneak_tagged" value="@{attr_character_skill_sneak_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_sneak_value" value="@{attr_character_skill_sneak_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Speech <span class="associated_stat_text">[CHA]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_speech_tagged" name="attr_character_skill_speech_tagged" value="@{attr_character_skill_speech_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_speech_value" value="@{attr_character_skill_speech_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Survival <span class="associated_stat_text">[END]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_survival_tagged" name="attr_character_skill_survival_tagged" value="@{attr_character_skill_survival_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_survival_value" value="@{attr_character_skill_survival_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Throwing <span class="associated_stat_text">[AGI]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_throwing_tagged" name="attr_character_skill_throwing_tagged" value="@{attr_character_skill_throwing_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_throwing_value" value="@{attr_character_skill_throwing_value}"/>
-						</td>
-					</tr>
-					<tr class="skill-table-row">
-						<td class="skill-table-cell">
-							Unarmed <span class="associated_stat_text">[STR]</span>
-						</td>
-						<td class="skill-table-cell">
-							<input type="checkbox" id="attr_character_skill_unarmed_tagged" name="attr_character_skill_unarmed_tagged" value="@{attr_character_skill_unarmed_tagged}">
-						</td>
-						<td class="skill-table-rank-cell skill-table-cell">
-							<input class="character_skill_tag_check" type="text" name="attr_character_skill_unarmed_value" value="@{attr_character_skill_unarmed_value}"/>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="fallout-combat">
-			<span class="title green">COMBAT</span>
-		</div>
+	<div class="fallout-skills">
+		<span class="title orange">SKILLS</span>
+		<table class="skill-table">
+			<colgroup>
+				<col style="width: 155px">
+				<col style="width: 34px">
+				<col style="width: 54px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="skill-table-title-cell">Name</th>
+					<th class="skill-table-title-cell">Tag</th>
+					<th class="skill-table-title-cell">Rank</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Athletics <span class="associated_stat_text">[STR]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_athletic_tagged" name="attr_character_skill_athletic_tagged" value="@{attr_character_skill_athletic_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_athletic_value" value="@{attr_character_skill_athletic_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Barter <span class="associated_stat_text">[CHA]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_barter_tagged" name="attr_character_skill_barter_tagged" value="@{attr_character_skill_barter_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_barter_value" value="@{attr_character_skill_barter_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Big Guns <span class="associated_stat_text">[END]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_bigGuns_tagged" name="attr_character_skill_athletic_tagged" value="@{attr_character_skill_bigGuns_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_bigGuns_value" value="@{attr_character_skill_bigGuns_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Energy Weapons <span class="associated_stat_text">[PER]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_energyWeapons_tagged" name="attr_character_skill_energyWeapons_tagged" value="@{attr_character_skill_energyWeapons_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_energyWeapons_value" value="@{attr_character_skill_energyWeapons_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Explosives <span class="associated_stat_text">[PER]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_Explosives_tagged" name="attr_character_skill_Explosives_tagged" value="@{attr_character_skill_Explosives_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_Explosives_value" value="@{attr_character_skill_Explosives_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Lockpick <span class="associated_stat_text">[PER]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_lockpick_tagged" name="attr_character_skill_lockpick_tagged" value="@{attr_character_skill_lockpick_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_lockpick_value" value="@{attr_character_skill_lockpick_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Medicine <span class="associated_stat_text">[INT]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_medicine_tagged" name="attr_character_skill_medicine_tagged" value="@{attr_character_skill_medicine_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_medicine_value" value="@{attr_character_skill_medicine_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Melee Weapons <span class="associated_stat_text">[STR]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_meleeWeapons_tagged" name="attr_character_skill_meleeWeapons_tagged" value="@{attr_character_skill_meleeWeapons_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_meleeWeapons_value" value="@{attr_character_skill_meleeWeapons_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Pilot <span class="associated_stat_text">[PER]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_pilot_tagged" name="attr_character_skill_pilot_tagged" value="@{attr_character_skill_pilot_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_pilot_value" value="@{attr_character_skill_pilot_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Repair <span class="associated_stat_text">[INT]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_repair_tagged" name="attr_character_skill_repair_tagged" value="@{attr_character_skill_repair_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_repair_value" value="@{attr_character_skill_repair_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Science <span class="associated_stat_text">[INT]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_science_tagged" name="attr_character_skill_science_tagged" value="@{attr_character_skill_science_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_science_value" value="@{attr_character_skill_science_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Small Guns <span class="associated_stat_text">[AGI]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_smallGuns_tagged" name="attr_character_skill_smallGuns_tagged" value="@{attr_character_skill_smallGuns_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_smallGuns_value" value="@{attr_character_skill_smallGuns_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Sneak <span class="associated_stat_text">[AGI]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_sneak_tagged" name="attr_character_skill_sneak_tagged" value="@{attr_character_skill_sneak_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_sneak_value" value="@{attr_character_skill_sneak_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Speech <span class="associated_stat_text">[CHA]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_speech_tagged" name="attr_character_skill_speech_tagged" value="@{attr_character_skill_speech_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_speech_value" value="@{attr_character_skill_speech_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Survival <span class="associated_stat_text">[END]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_survival_tagged" name="attr_character_skill_survival_tagged" value="@{attr_character_skill_survival_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_survival_value" value="@{attr_character_skill_survival_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Throwing <span class="associated_stat_text">[AGI]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_throwing_tagged" name="attr_character_skill_throwing_tagged" value="@{attr_character_skill_throwing_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_throwing_value" value="@{attr_character_skill_throwing_value}"/>
+					</td>
+				</tr>
+				<tr class="skill-table-row">
+					<td class="skill-table-cell">
+						Unarmed <span class="associated_stat_text">[STR]</span>
+					</td>
+					<td class="skill-table-cell">
+						<input type="checkbox" id="attr_character_skill_unarmed_tagged" name="attr_character_skill_unarmed_tagged" value="@{attr_character_skill_unarmed_tagged}">
+					</td>
+					<td class="skill-table-rank-cell skill-table-cell">
+						<input class="character_skill_tag_check" type="text" name="attr_character_skill_unarmed_value" value="@{attr_character_skill_unarmed_value}"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="fallout-combat">
+		<span class="title green">COMBAT</span>
 	</div>
 	
 	<div class="fallout-weapons">
-			<span class="title brown">WEAPONS</span>
-			<table class="weapons-table">
-				<colgroup>
-					<col style="width: 175px">
-					<col style="width: 64px">
-					<col style="width: 34px">
-					<col style="width: 54px">
-					<col style="width: 154px">
-					<col style="width: 84px">
-					<col style="width: 74px">
-					<col style="width: 34px">
-					<col style="width: 34px">
-					<col style="width: 54px">
-					<col style="width: 54px">
-					<col style="width: 54px">
-				</colgroup>
-				<thead>
-					<tr>
-						<th class="weapons-table-title-cell">NAME</th>
-						<th class="weapons-table-title-cell">SKILL</th>
-						<th class="weapons-table-title-cell">TN</th>
-						<th class="weapons-table-title-cell">TAG</th>
-						<th class="weapons-table-title-cell">DAMAGE</th>
-						<th class="weapons-table-title-cell">EFFECTS</th>
-						<th class="weapons-table-title-cell">TYPE</th>
-						<th class="weapons-table-title-cell">RATE</th>
-						<th class="weapons-table-title-cell">RANGE</th>
-						<th class="weapons-table-title-cell">QUALITIES</th>
-						<th class="weapons-table-title-cell">AMMO</th>
-						<th class="weapons-table-title-cell">WEIGHT</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="weapons-table-row">
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-						<td class="weapons-table-cell"> </td>
-					</tr>
-				</tbody>
-			</table>
+		<span class="title brown">WEAPONS</span>
+		<div class="weapons_table">
+			<div class="table-header">
+					<span class="header-weapon-name table-header-cell">NAME</span>
+					<span class="header-weapon-skill table-header-cell">SKILL</span>
+					<span class="header-weapon-tn table-header-cell">TN</span>
+					<span class="header-weapon-tag table-header-cell">TAG</span>
+					<span class="header-weapon-damage table-header-cell">DAMAGE</span>
+					<span class="header-weapon-effect table-header-cell">EFFECTS</span>
+					<span class="header-weapon-type table-header-cell">TYPE</span>
+					<span class="header-weapon-rate table-header-cell">RATE</span>
+					<span class="header-weapon-range table-header-cell">RANGE</span>
+					<span class="header-weapon-quantities table-header-cell">QUALITIES</span>
+					<span class="header-weapon-ammo table-header-cell">AMMO</span>
+					<span class="header-weapon-weight table-header-cell">WEIGHT</span>
+			</div>
+			<fieldset class="repeating_weapons">
+				<input class="weapon-name" type="text" name="attr_weapon-name" value="1"/>
+				<input class="weapon-skill" type="text" name="attr_weapon-skill" value="1"/>
+				<input class="weapon-tn" type="text" name="attr_weapon-tn" value="1"/>
+				<input class="weapon-tag" type="checkbox" value="@{attr_weapon-tag}">
+				<input class="weapon-damage" type="text" name="attr_weapon-damage" value="1"/>
+				<input class="weapon-effect" type="text" name="attr_weapon-effect" value="1"/>
+				<input class="weapon-type" type="text" name="attr_weapon-type" value="1"/>
+				<input class="weapon-rate" type="text" name="attr_weapon-rate" value="1"/>
+				<input class="weapon-range" type="text" name="attr_weapon-range" value="1"/>
+				<input class="weapon-quantities" type="text" name="attr_weapon-qualities" value="1"/>
+				<input class="weapon-ammo" type="text" name="attr_weapon-ammo" value="1"/>
+				<input class="weapon-weight" type="text" name="attr_weapon-weight" value="1"/>
+			</fieldset>
+		</div>
 	</div>
 
 	<div class="fallout-inventory">
-		<div class="cogged-value">
-			<span class="cog-inner-title">CAPS</span>
-			<span class="cog-value">
+		<div class="side-cogged-value" style="margin-bottom: 10px;">
+			<span class="side-cog-title">CAPS</span>
+			<span class="side-cog-value">
 				<input class="input-field-cog" type="text" name="attr_character_caps" value="1"/>
 			</span>
 		</div>
 
 		<span class="title orange">AMMO</span>
-		<table class="ammo-table">
-				<colgroup>
-					<col style="width: 200px">
-					<col style="width: 100px">
-				</colgroup>
-				<thead>
-					<tr>
-						<th class="ammo-table-title-cell">CALIBER</th>
-						<th class="ammo-table-title-cell">QUANTITY</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="ammo-table-row">
-						<td class="ammo-table-cell">
-							<select class="input-field-medium" name="attr_origin" title="Origin">
-								<option value="38" selected>.38</option>
-								<option value="10">10mm</option>
-								<option value="308">.308</option>
-								<option value="f">Flare</option>
-								<option value="ss">Shotgun Shell</option>
-								<option value="45">.45</option>
-								<option value="ff">Flamer Fuel</option>
-								<option value="fc">Fusion Cell</option>
-								<option value="gr">Gamma Round</option>
-								<option value="rs">Railway Spike</option>
-								<option value="sa">Syringer Ammo</option>
-								<option value="44">.44 Magnum</option>
-								<option value="50">.50</option>
-								<option value="556">5.56mm</option>
-								<option value="5">5mm</option>
-								<option value="fcr">Fusion Core</option>
-								<option value="m">Missile</option>
-								<option value="pc">Plasma Cartridge</option>
-								<option value="2">2mm EC</option>
-								<option value="mn">Mini-Nuke</option>
-							</select>
-						</td>
-						<td class="ammo-table-cell">
-							<button>ADD</button>
-						</td>
-					</tr>
-				</tbody>
-		</table>
+		<div class="ammo_table">
+			<div class="table-header">
+				<span class="header-caliber table-header-cell">CALIBER</span>
+				<span class="header-quantity table-header-cell">QUANTITY</span>
+			</div>
+			<fieldset class="repeating_ammo">
+				<select class="ammo_name" name="attr_ammo_name">
+					<option value="38" selected>.38</option>
+					<option value="10">10mm</option>
+					<option value="308">.308</option>
+					<option value="f">Flare</option>
+					<option value="ss">Shotgun Shell</option>
+					<option value="45">.45</option>
+					<option value="ff">Flamer Fuel</option>
+					<option value="fc">Fusion Cell</option>
+					<option value="gr">Gamma Round</option>
+					<option value="rs">Railway Spike</option>
+					<option value="sa">Syringer Ammo</option>
+					<option value="44">.44 Magnum</option>
+					<option value="50">.50</option>
+					<option value="556">5.56mm</option>
+					<option value="5">5mm</option>
+					<option value="fcr">Fusion Core</option>
+					<option value="m">Missile</option>
+					<option value="pc">Plasma Cartridge</option>
+					<option value="2">2mm EC</option>
+					<option value="mn">Mini-Nuke</option>
+				</select>
+				<input class="ammo_count" type="text" name="attr_ammo_count" value="0"/>
+			</fieldset>
+		</div>
 
 
 		<span class="title green">GEAR</span>
-		<table class="gear-table">
-				<colgroup>
-					<col style="width: 200px">
-					<col style="width: 100px">
-				</colgroup>
-				<thead>
-					<tr>
-						<th class="gear-table-title-cell">ITEM</th>
-						<th class="gear-table-title-cell">LBS</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="gear-table-row">
-						<td class="gear-table-cell"> </td>
-						<td class="gear-table-cell"> </td>
-					</tr>
-
-					<tr class="gear-table-row">
-						<td class="gear-table-cell">CURRENT CARRY WEIGHT</td>
-						<td class="gear-table-cell"> </td>
-					</tr>
-					<tr class="gear-table-row">
-						<td class="gear-table-cell">MAXIMUM CARRY WEIGHT</td>
-						<td class="gear-table-cell"> </td>
-					</tr>
-				</tbody>
-		</table>
+		<div class="gear_table">
+			<div class="table-header">
+				<span class="header-item-name table-header-cell">ITEM</span>
+				<span class="header-item-weight table-header-cell">LBS.</span>
+			</div>
+			<fieldset class="repeating_gear">
+				<input class="gear-name" type="text" name="attr_inventory_gear_name" value="item name"/>
+				<input class="gear-weight" type="text" name="attr_inventory_gear_weight" value="1"/>
+			</fieldset>
+			<div class="table-Footer">
+				<span class="footer-item-name">CURRENT CARRY WEIGHT</span>
+				<span class="footer-item-weight">0</span>
+			</div>
+			<div class="table-Footer">
+				<span class="footer-item-name">MAXIMUM CARRY WEIGHT</span>
+				<span class="footer-item-weight">0</span>
+			</div>
+		</div>
 	</div>
 
 	<div class="fallout-perks-n-traits">
 		<span class="title blue">PERKS & TRAITS</span>
-		<table class="perks-n-traits-table">
-				<colgroup>
-					<col style="width: 200px">
-					<col style="width: 100px">
-					<col style="width: 100px">
-				</colgroup>
-				<thead>
-					<tr>
-						<th class="perks-n-traits-table-title-cell">NAME</th>
-						<th class="perks-n-traits-table-title-cell">RANK</th>
-						<th class="perks-n-traits-table-title-cell">EFFECT</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="perks-n-traits-table-row">
-						<td class="perks-n-traits-table-cell"> </td>
-						<td class="perks-n-traits-table-cell"> </td>
-						<td class="perks-n-traits-table-cell"> </td>
-					</tr>
-				</tbody>
-		</table>
+		<div class="perk_table">
+			<div class="table-header">
+				<span class="header-perk-name table-header-cell">NAME</span>
+				<span class="header-perk-rank table-header-cell">RANK</span>
+				<span class="header-perk-effect table-header-cell">EFFECT</span>
+			</div>
+			<fieldset class="repeating_perks">
+				<input class="perk-name" type="text" name="attr_perk_name"/>
+				<input class="perk-rank" type="text" name="attr_perk_rank"/>
+				<input class="perk-effect" type="text" name="attr_perk_effect"/>
+			</fieldset>
+		</div>
 	</div>
 </div>
 
