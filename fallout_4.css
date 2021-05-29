@@ -178,8 +178,8 @@
 }
 
 .side-cogged-value {
-    background-image: url("https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/cog-whitefill-150.png");
-    background-size: 105px;
+    background-image: url("https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/salmon-left-cog.png");
+    background-size: 280px 125px;
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -187,7 +187,7 @@
 .side-cog-value {
     display: inline-block;
     text-align: center;
-    width: 105px;
+    width: 76px;
     height: 105px;
     line-height: 105px;
 }
@@ -195,7 +195,9 @@
 .side-cog-title {
     display: inline-block;
     text-align: center;
-    width: 166px;
+    width: 187px;
+    font-weight: bold;
+    color: white;
 }
 
 .input-field-atr,
