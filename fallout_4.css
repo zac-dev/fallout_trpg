@@ -99,8 +99,37 @@
 }
 
 
+/* S.P.E.C.I.A.L. */
+.grey-small-left-cog {
+    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/grey-left-cog.png');
+    background-size: 173px 71px;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 173px;
+    left: -50px;
+    top: 108px;
+    height: 71px;
+}
 
 
+.small-titled-cog-value .cog-title {
+    position: absolute;
+    left: 23px;
+    top: 34px;
+    font-weight: bold;
+    color: white;
+}
+
+.small-titled-cog-value .cog-value {
+    left: 120px;
+    top: -10px;
+    position: absolute;
+    width: 50px;
+}
+
+.small-titled-cog-value .input-field-atr {
+    width: 32px;
+}
 
 /* row containers */
 
@@ -179,7 +208,7 @@
 
 .side-cogged-value {
     background-image: url("https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/salmon-left-cog.png");
-    background-size: 280px 125px;
+    background-size: 280px 105px;
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -187,7 +216,7 @@
 .side-cog-value {
     display: inline-block;
     text-align: center;
-    width: 76px;
+    width: 105px;
     height: 105px;
     line-height: 105px;
 }
@@ -195,9 +224,17 @@
 .side-cog-title {
     display: inline-block;
     text-align: center;
-    width: 187px;
+    width: 165px;
     font-weight: bold;
     color: white;
+}
+
+.input-field-large-cog {
+    font-size: xx-large;
+}
+
+.input-field-small-cog {
+    font-size: medium;
 }
 
 .input-field-atr,
@@ -281,9 +318,7 @@
 }
 
 .skill-table-title-cell,
-.ammo-table-title-cell,
-.gear-table-title-cell,
-.perks-n-traits-table-title-cell {
+.health-table-title-cell {
     background-color: black;
     color: white;
     border: 1px solid black;
@@ -320,6 +355,183 @@
 
 .character_skill_tag_check {
     width: 40px;
+    border: none;
+}
+
+/* HEALTH */
+
+.health {
+    background-color: lightgray;
+    position: relative;
+    width: 580px;
+    height: 428px;
+}
+
+.poison-dr {
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    left: 10px;
+    top: 46px;
+}
+
+.poison-dr_header {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 6.2px;
+    height: 22px;
+    display: inline-block;
+}
+
+.poison-dr_value {
+    border: none;
+    width: 58px;
+    text-align: center;
+}
+
+.health-data-table {
+    display: inline-block;
+}
+
+.head-health {
+    left: 193px;
+    top: 20px;
+}
+
+.overall-health {
+    left: 424px;
+    top: 0px;
+}
+
+.left-arm-health {
+    left: 10px;
+    top: 156px;
+}
+
+.right-arm-health {
+    left: 380px;
+    top: 156px;
+}
+
+.torso-health {
+    left: 193px;
+    top: 245px;
+}
+
+.left-leg-health {
+    left: 10px;
+    top: 334px;
+}
+
+.right-leg-health {
+    left: 380px;
+    top: 334px;
+}
+
+.head-health,
+.overall-health,
+.left-arm-health,
+.right-arm-health,
+.torso-health,
+.left-leg-health,
+.right-leg-health {
+    position: absolute;
+}
+
+.health-table-cell {
+    border: 1px solid black;
+}
+
+.health-table-title {
+    width: 60px;
+}
+
+.health-table-value {
+    width: 35px;
+}
+
+.health-table-cell input {
+    width: 32px;
+    border: none;
+}
+
+.health-hp-table-cell {
+    background-color: white;
+    border-top: 1px dotted black;
+}
+
+.health-table {
+    border: 1px solid black;
+}
+
+.health-hp-value {
+    width: 126px;
+    border: none;
+    text-align: center;
+}
+
+.health-hp-table-cell .cell-title {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.health-hp-max-value {
+    display: inline-block;
+    width: 62px;
+}
+
+.health-hp-curr-value {
+    font-size: xx-large;
+    width: 100%;
+}
+
+.health-table-cell:nth-child(even) {
+    background-color: white;
+}
+
+.health-table-cell:nth-child(odd) {
+    background-color: none;
+}
+
+
+.health-table-row:nth-child(even) {
+    background-color: rgb(213, 222, 213);
+}
+
+.health-table-row:nth-child(odd) {
+    background-color: rgb(185, 202, 185);
+}
+
+.side-black-cogged-value {
+    display: inline-block;
+    background-image: url("https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/black-left-cog.png");
+    background-size: 190px 72px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 190px;
+    height: 61px;
+    padding-top: 0px;
+}
+
+.side-black-cogged-value .cog-value-title {
+    display: inline-block;
+    padding-left: 1rem;
+    width: 123px;
+    text-align: left;
+    line-height: 64px;
+    padding-top: 0px;
+}
+
+.side-black-cogged-value .cog-value {
+    display: inline-block;
+    height: 61px;
+    margin: auto;
+}
+
+.side-black-cogged-value .input-field-atr {
+    background: none;
+    width: 41px;
     border: none;
 }
 
@@ -569,12 +781,8 @@
 
 .grey-top-cog {
     background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/grey-top-cog.png');
-}
-
-.grey-small-left-cog {
-    background-image: url('https://raw.githubusercontent.com/zac-dev/fallout_trpg/master/img/grey-left-cog.png');
-    background-size: 118px;
-    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 39px;
 }
 
 .black {
