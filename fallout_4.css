@@ -441,6 +441,7 @@
 
 .health-table-cell {
     border: 1px solid black;
+    padding-left: 3px;
 }
 
 .health-table-title {
@@ -593,23 +594,36 @@
 }
 
 .ammo_name {
-    width: 164px;
+    width: 104px;
     margin: auto;
 }
 
 .ammo_count {
     border: none;
     text-align: right;
-    width: 95px;
+    width: 60px;
     height: 30px;
 }
 
+.ammo_hitrate {
+    border: none;
+    text-align: right;
+    width:  60px;
+    height: 30px;
+    background: url(images/combat_dice_small_effect.png) no-repeat scroll 20px 20px;
+}
+
 .header-caliber {
-    width: 155px;
+    width: 115px;
 }
 
 .header-quantity {
-    width: 96px;
+    width: 60px;
+    text-align: right;
+}
+
+.header-hitrate {
+    width: 60px;
     text-align: right;
 }
 
@@ -823,4 +837,10 @@
 .grey {
     background-color: rgb(163, 153, 175);
     color: white;
+}
+
+.notes {
+    margin: 0.5rem;
+    overflow: hidden;
+    width: 84rem;
 }

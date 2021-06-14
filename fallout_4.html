@@ -92,12 +92,12 @@
 	<div class="titled-cog-value grey-top-cog">
 		<span class="cog-value-title">LUCK</span>
 		<span class="cog-value">
-			<input class="input-field-atr input-field-large-cog" type="text" name="attr_character_atr_LUCK" value="1"/>
+			<input class="input-field-atr input-field-large-cog" type="text" name="attr_character_atr_LUCK" value="5"/>
 		</span>
 		<div class="small-titled-cog-value grey-small-left-cog">
 			<span class="cog-title">LUCK POINTS</span>
 			<span class="cog-value">
-				<input class="input-field-atr input-field-small-cog" type="text" name="attr_character_atr_LUCK_pts" value="1"/>
+				<input class="input-field-atr input-field-small-cog" type="text" name="attr_character_atr_LUCK_pts" value="5"/>
 			</span>
 		</div>
 	</div>
@@ -145,7 +145,7 @@
 						Big Guns <span class="associated_stat_text">[END]</span>
 					</td>
 					<td class="skill-table-cell">
-						<input type="checkbox" id="attr_character_skill_bigGuns_tagged" name="attr_character_skill_athletic_tagged">
+						<input type="checkbox" id="attr_character_skill_bigGuns_tagged" name="attr_character_skill_bigGuns_tagged">
 					</td>
 					<td class="skill-table-rank-cell skill-table-cell">
 						<input class="character_skill_tag_check" type="text" name="attr_character_skill_bigGuns_value"/>
@@ -314,7 +314,7 @@
 		<div class="side-black-cogged-value">
 			<span class="cog-value-title">MELEE DAMAGE</span>
 			<span class="cog-value">
-				<input class="input-field-atr input-field-small-cog" type="text" name="attr_combat_melee" value="1"/>
+				<input class="input-field-atr input-field-small-cog" type="text" name="attr_combat_melee" value="0"/>
 			</span>
 		</div>
 		<div class="side-black-cogged-value">
@@ -326,10 +326,10 @@
 		<div class="side-black-cogged-value">
 			<span class="cog-value-title">INITIATIVE</span>
 			<span class="cog-value">
-				<input class="input-field-atr input-field-small-cog" type="text" name="attr_combat_initiative" value="1"/>
+				<input class="input-field-atr input-field-small-cog" type="text" name="attr_combat_initiative" value="10"/>
 			</span>
 		</div>
-		<div class="health humanoid">
+		<div class="health">
 			<div class="poison-dr">
 				<span class="poison-dr_header">POISON DR</span>
 				<input class="poison-dr_value" type="text" name="attr_health_poison" value="1"/>
@@ -354,13 +354,13 @@
 								Phys. DR
 							</td>
 							<td class="health-table-cell">
-								<input type="text" name="attr_health_head_physical" value="@{attr_health_head_physical}">
+								<input type="text" name="attr_health_head_physical"/>
 							</td>
 							<td class="health-table-cell">
 								RAD. DR
 							</td>
 							<td class="health-table-cell">
-								<input type="text" name="attr_health_head_radiation" value="@{attr_health_head_radiation}"/>
+								<input type="text" name="attr_health_head_radiation"/>
 							</td>
 						</tr>
 						<tr class="health-table-row">
@@ -368,13 +368,13 @@
 								En. DR
 							</td>
 							<td class="health-table-cell">
-								<input type="text" name="attr_health_head_en" value="@{attr_health_head_en}">
+								<input type="text" name="attr_health_head_en"/>
 							</td>
 							<td class="health-table-cell">
 								HP
 							</td>
 							<td class="health-table-cell">
-								<input type="text" name="attr_health_head_hit_points" value="@{attr_health_head_hit_points}">
+								<input type="text" name="attr_health_head_hit_points"/>
 							</td>
 						</tr>
 					</tbody>
@@ -686,6 +686,7 @@
 		<div class="ammo_table">
 			<div class="table-header">
 				<span class="header-caliber table-header-cell">CALIBER</span>
+				<span class="header-quantity table-header-cell">HIT RATE</span>
 				<span class="header-quantity table-header-cell">QUANTITY</span>
 			</div>
 			<fieldset class="repeating_ammo">
@@ -712,6 +713,7 @@
 					<option value="mn">Mini-Nuke</option>
 				</select>
 				<input class="ammo_count" type="text" name="attr_ammo_count" value="0"/>
+				<input class="ammo_hit_rate" type="text" name="attr_ammo_hit_rate" value="0"/>
 			</fieldset>
 		</div>
 
@@ -761,27 +763,62 @@
 	</div>
 </div>
 <script type="text/worker">
-	// Update Defence stat
-	on("change:attr_character_atr_AGILITY", function () {
-		getAttrs(["attr_character_atr_AGILITY"], function (values) {
+	on("change:character_atr_AGILITY", function() {
+		console.log("we read the character_atr_AGILITY!");
+		getAttrs(["character_atr_AGILITY"], function(values) {
+			let defence_value = values.character_atr_AGILITY > 8 ? 2 : 1
 			setAttrs({
-				attr_combat_defence: values.attr_character_atr_AGILITY < 9 ? 1 : 2
-      		});
+				'combat_defence': defence_value,
+			});
 		});
 	});
 
-	// Max HP
-	on("change:attr_character_atr_ENDURANCE change:attr_character_atr_LUCK", function () {
-		getAttrs(["attr_character_atr_LUCK", "attr_character_atr_ENDURANCE"], function (values) {
-			console.log("END: " + values.attr_character_atr_ENDURANCE + "AND LUCK: " + values.attr_character_atr_LUCK);
+	on("change:character_atr_ENDURANCE change:character_atr_LUCK", function() {
+		console.log("we read the ENDURANCE/LUCK!");
+		getAttrs(["character_atr_ENDURANCE", "character_atr_LUCK"], function(values) {
+			let max_hp = +values.character_atr_ENDURANCE + +values.character_atr_LUCK
 			setAttrs({
-				attr_health_max_hp: values.attr_character_atr_ENDURANCE + values.attr_character_atr_LUCK
-      		});
+				'health_max_hp': max_hp,
+			});
 		});
 	});
-});
+
+	on("change:character_atr_ENDURANCE change:character_atr_PERCEPTION", function() {
+		console.log("we read the ENDURANCE/PERCEPTION!");
+		getAttrs(["character_atr_ENDURANCE", "character_atr_PERCEPTION"], function(values) {
+			let initiative = +values.character_atr_ENDURANCE + +values.character_atr_PERCEPTION
+			setAttrs({
+				'combat_initiative': initiative,
+			});
+		});
+	});
+
+	on("change:character_atr_STRENGTH", function() {
+		console.log("we read the STRENGTH!");
+		getAttrs(["character_atr_STRENGTH"], function(values) {
+			var melee_dmg = +values.character_atr_STRENGTH < 7 ? 0 : 1
+			if (+values.character_atr_STRENGTH < 7) {
+				melee_dmg = 0
+			}
+			if (+values.character_atr_STRENGTH > 6 && +values.character_atr_STRENGTH < 9) {
+				melee_dmg = 1
+			}
+			if (+values.character_atr_STRENGTH > 8 && +values.character_atr_STRENGTH < 11) {
+				melee_dmg = 2
+			}
+			if (+values.character_atr_STRENGTH > 10) {
+				melee_dmg = 3
+			}
+			let maxWeight = 150 + (+values.character_atr_STRENGTH * 10)
+			setAttrs({
+				'combat_melee': melee_dmg,
+				''
+			});
+		});
 	});
 </script>
+
+
 
 
 
